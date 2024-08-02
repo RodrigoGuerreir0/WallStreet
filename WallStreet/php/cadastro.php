@@ -31,8 +31,8 @@
 
                     <td>
 
-                        <label for="Nascimento">Data de Nascimento</label><br>
-                        <input type="date" class="" id="" name="DataNascimento" placeholder="Data de Nascimento" required>
+                        <label for="Nascimento" class="TDLEFT">Data de Nascimento</label><br>
+                        <input type="date" class="TDLEFT" id=""  name="DataNascimento" placeholder="Data de Nascimento" required>
 
                     </td>
                 </tr>
@@ -45,8 +45,8 @@
                     </td>
 
                     <td>
-                        <label for="sexo">Sexo</label><br>
-                        <select name="Sexo">
+                        <label for="sexo" class="TDLEFT">Sexo</label><br>
+                        <select name="Sexo" class="TDLEFT">
                             <option value="Masculino" selected>Masculno</option>
                             <option value="Femenino">Feminino</option>
                             <option value="Outro">Outro</option>
@@ -57,13 +57,12 @@
                 <tr>
                     <td>
                         <label for="telefone">Telefone</label>
-                        <input type="text" class="" id="" name="Telefone" placeholder="Digite seu Telefone" maxlength="15" required>
-
+                        <input type="text" id="phone" name="Telefone" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" placeholder="Digite seu telefone" required />                        
                     </td>
 
                     <td>
-                        <label for="password">Senha</label><br>
-                        <input type="password" id="" name="Senha" placeholder="Digite sua senha" required />
+                        <label for="password" class="TDLEFT">Senha</label><br>
+                        <input type="password" class="TDLEFT" name="Senha" placeholder="Digite sua senha" required />
                     </td>
                 </tr>
 
@@ -74,8 +73,8 @@
                     </td>
 
                     <td>
-                        <label for="confirmPassword">Confirmar Senha</label>
-                        <input type="password" name="ConfirmarSenha" placeholder="Confirme sua senha" required />
+                        <label for="confirmPassword" class="TDLEFT">Confirmar Senha</label>
+                        <input type="password" class="TDLEFT" name="ConfirmarSenha" placeholder="Confirme sua senha" required />
                     </td>
                 </tr>
 
@@ -95,7 +94,7 @@
             </table>
 
             <center>
-                <p>Já tem uma conta? <a href="login.php">Faça login</a></p>
+                <p class="FINAL">Já tem uma conta? <a href="login.php">Faça login</a></p>
             </center>
         </form>
     </div>

@@ -31,7 +31,7 @@ center{
     background-color: #fdfdfd;
     border-radius: 7px;
     padding: 40px;
-    width: 950px;
+    width: 950  px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
     gap: 5px
 }
@@ -62,23 +62,6 @@ center{
     font-size: 2.3em;
 }
 
-.formLogin select{
-    padding: 15px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    border-radius: 4px;
-    transition: all linear 160ms;
-    outline: none;
-    width: 432px;
-}
-.formLogin select:focus {
-    border: 1px solid #666666;
-    transform: scale(1.05);
-
-}
-
 .formLogin p {
     display: inline-block;
     font-size: 14px;
@@ -95,36 +78,12 @@ center{
     border-radius: 4px;
     transition: all linear 160ms;
     outline: none;
-    width: 400px;
-}
-.formLogin input[type=submit] {
-    padding: 15px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    margin-top: 23px;
-    border-radius: 4px;
-    transition: all linear 160ms;
-    outline: none;
-    width: 432px;
-    margin-left: 70px;
 }
 
-.TDLEFT{
-margin-left: 70px;
-
-}
 
 .formLogin input:focus {
     border: 1px solid #666666;
-    transform: scale(1.05);
-
 }
-
-/*.formLogin input:hover{
-    transform: scale(1.05);
-
-}*/
 
 .formLogin label {
     font-size: 14px;
@@ -141,8 +100,6 @@ margin-left: 70px;
 
 .formLogin a:hover {
     color: #0e0d0d;
-    transform: scale(1.05);
-
 }
 
 .btn {
@@ -153,25 +110,16 @@ margin-left: 70px;
     border: none !important;
     transition: all linear 160ms;
     cursor: pointer;
-    width: 100%
-
-
+    margin: 0 !important;
+    width: 100%;
+    border-radius: 2px;
 }
-
 .btn:hover {
     transform: scale(1.05);
     background-color: #8a8989;
 
 }
-.btn:focus {
-    transform: scale(1.05);
-    background-color: #8a8989;
-
-}
-
-.FINAL{
-    margin-top: 40px;
-}
-
     
-
+.FINAL{
+    margin-top: 50px;
+}

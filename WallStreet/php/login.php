@@ -37,7 +37,7 @@
             <input type="submit" value="Acessar" class="btn" />
             <center>
 
-            <p class="FINAL">Não possui uma conta? <a href="cadastro.php" >Cadastre-se</a></p>
+            <p class="FINAL">Não possui uma conta? <a href="./cadastro.php" >Cadastre-se</a></p>
         </center>
         
         </form>
