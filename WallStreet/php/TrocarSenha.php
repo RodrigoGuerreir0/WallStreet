@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/trocarSenha.css">
 </head>
 <body>
+
+
+
+
+
     <?php
     try {
         $conexao = new PDO("mysql:host=127.0.0.1;dbname=WallStreet", "root", "");
@@ -22,14 +28,35 @@
 
             if ($resultado) {
                 foreach ($resultado as $Usuario) {
-                    echo $Usuario["Usuario"];
+                    
                     ?>
-                    <form action="#" method="post">
-                        <input type="hidden" name="CpfCadastrado" value="<?php echo htmlspecialchars($cpf); ?>">
-                        <input type="password" name="NovaSenha" placeholder="Nova Senha" required>
-                        <input type="password" name="ConfirmarNovaSenha" placeholder="Confirmar Nova Senha" required>
-                        <input type="submit" value="Alterar Senha">
-                    </form>
+                    <div class="page">
+
+                        <div class="formLogin2">
+
+                            <h1>Olá <?php echo  $Usuario["Usuario"];  ?>
+                                
+                              
+                        
+                        </h1>
+
+                            <p>Preencha os campos abaixo para redefinir sua senha</p>
+
+                        </div>  
+
+                        <form action="#" method="post" class="formLogin">
+                            <?php 
+                              
+                                
+                             ?>
+                            <input type="hidden" name="CpfCadastrado" value="<?php echo htmlspecialchars($cpf); ?>">
+                            <input type="password" name="NovaSenha" placeholder="Nova Senha" required>
+                            <input type="password" name="ConfirmarNovaSenha" placeholder="Confirmar Nova Senha" required>
+                            <input type="submit" value="Alterar Senha" class="btn">
+                        </form>
+
+                    </div>
+                    
                     <?php
                 }
             } else {

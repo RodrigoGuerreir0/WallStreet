@@ -64,7 +64,7 @@
             $_SESSION['Usuario'] = $usuario['Usuario'];
             header("Location: ./inicio.php");
         } else {
-            echo "E-mail ou senha incorretos";
+            echo  "<script>alert('E-mail ou senha incorretos!');</script>";
         }
     }
     ?>

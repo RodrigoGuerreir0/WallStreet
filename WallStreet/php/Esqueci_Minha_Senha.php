@@ -20,14 +20,21 @@
     
     <div class="page">
         <br>
-        <form action="./TrocarSenha.php" method="post" class="formLogin">
 
-            <h1>Esqueci minha senha</h1>
+        <div class="formLogin2">
+
+         <h1>Esqueci minha senha</h1>
 
             <p>Digite seu CPF abaixo para podermos verificar seu login.</p>
+
+        </div>
+
+        <form action="./TrocarSenha.php" method="post" class="formLogin">
+
+           
             
                         <label for="cpf">Digite seu CPF</label>
-                        <input oninput="mascara(this)" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="11" required>
+                        <input oninput="mascara(this)" type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="11" minlength="10" required>
 
             
         
