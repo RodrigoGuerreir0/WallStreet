@@ -137,9 +137,9 @@ if (!isset($_SESSION['Usuario'])) {
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <ul>
-                        <li><a href="#">(19) 99256-1004</a></li>
-                        <li><a href="#">(19) 97138-8368</a></li>
-                        <li><a href="#">(19) 99272-9339</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5519992561004&text=Oi,%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">(19) 99256-1004</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5519971388368&text=Oi,%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">(19) 97138-8368</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=5519992729339&text=Oi,%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">(19) 99272-9339</a></li>
                        
                        
                     </ul>
