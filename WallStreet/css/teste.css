@@ -1,0 +1,11 @@
+.map1Tela{
+    border: 2px red solid;
+    width: 50vh;
+    height: 50vh;
+}
+
+.map2Tela{
+    border: 2px red solid;
+    width: auto;
+    height: 40vh;
+}

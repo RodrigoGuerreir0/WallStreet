@@ -18,7 +18,7 @@
 
     <div class="page">
         <br>
-        <form action="" method="post" class="formLogin">
+        <form action="validarcadastro.php" method="post" class="formLogin">
             <h1>Cadastro</h1>
             <p>Preencha o formulário abaixo para criar uma conta.</p>
 
@@ -93,62 +93,21 @@
 
             </table>
 
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" name="terms" required />
+                
+                <label for="terms">Li e estou de acordo com as</a> <a targe href="PoliticaDePrivacidade.php" target="_blank"> Políticas de privacidade</a>.</label>
+            </div>
+
             <center>
                 <p class="FINAL">Já tem uma conta? <a href="login.php">Faça login</a></p>
             </center>
         </form>
     </div>
 
-    <?php
+ 
 
-    if (isset($_POST["Nome"], $_POST["DataNascimento"], $_POST["Sexo"], $_POST["Cpf"], $_POST["Telefone"], $_POST["Email"], $_POST["Usuario"], $_POST["Senha"], $_POST["ConfirmarSenha"])) {
-        $Nome = $_POST["Nome"];
-        $DataNascimento = $_POST["DataNascimento"];
-        $Sexo = $_POST["Sexo"];
-        $Cpf = $_POST["Cpf"];
-        $Telefone = $_POST["Telefone"];
-        $Email = $_POST["Email"];
-        $Usuario = $_POST["Usuario"];
-        $Senha = $_POST["Senha"];
-        $ConfirmarSenha = $_POST["ConfirmarSenha"];
 
-        $conexao = new PDO("mysql:host=127.0.0.1;dbname=WallStreet", "root", "");
-        $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        if ($Senha == $ConfirmarSenha) {
-            $verificarUsuario = $conexao->prepare("SELECT * FROM Perfil WHERE Usuario = :Usuario OR Cpf = :Cpf OR Email = :Email");
-            $verificarUsuario->bindParam(":Usuario", $Usuario);
-            $verificarUsuario->bindParam(":Email", $Email);
-            $verificarUsuario->bindParam(":Cpf", $Cpf);
-            $verificarUsuario->execute();
-
-            if ($verificarUsuario->rowCount() > 0) {
-                echo "Usuário, CPF ou E-mail já existem";
-            } else {
-
-                $comandoSQL = $conexao->prepare("INSERT INTO Perfil (Nome, DataNascimento, Sexo, Cpf, Telefone, Email, Usuario, Senha) 
-                                            VALUES (:Nome, :DataNascimento, :Sexo, :Cpf, :Telefone, :Email, :Usuario, :Senha)");
-                $comandoSQL->bindParam(":Nome", $Nome);
-                $comandoSQL->bindParam(":DataNascimento", $DataNascimento);
-                $comandoSQL->bindParam(":Sexo", $Sexo);
-                $comandoSQL->bindParam(":Cpf", $Cpf);
-                $comandoSQL->bindParam(":Telefone", $Telefone);
-                $comandoSQL->bindParam(":Email", $Email);
-                $comandoSQL->bindParam(":Usuario", $Usuario);
-                $comandoSQL->bindParam(":Senha", $Senha);
-                $comandoSQL->execute();
-                header("Location: ./login.php");
-            }
-        } else {
-    ?>
-
-            <script>
-                alert("As senhas nao sao identicas")
-            </script>
-    <?php
-
-        }
-    }
-    ?>
 
 </body>
 

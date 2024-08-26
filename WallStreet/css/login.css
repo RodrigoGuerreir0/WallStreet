@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+html{
+    background: url("../img/bgE2.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #bbbbbb;
-
 }
+
 
 center{
     height: 50px;
@@ -19,9 +23,8 @@ center{
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: 500%;
-    background-color: #bbbbbb;
-    margin-top: 80px;
+    height: 92vh;
+    margin-top:90px;
 }
 
 
@@ -33,7 +36,9 @@ center{
     padding: 40px;
     width: 950  px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px
+    gap: 5px;
+    margin-top: -90px;
+    
 }
 
 .formLogin2 {
