@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/trocarSenha.css">
+    <link rel="stylesheet" href="../css/TrocarSenha.css">
+    <title>Alterar Senha</title>
 </head>
+
 <body>
-
-
-
-
-
     <?php
     try {
         $conexao = new PDO("mysql:host=127.0.0.1;dbname=WallStreet", "root", "");
         $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
+
         if (isset($_POST["cpf"])) {
             $cpf = $_POST["cpf"];
 
@@ -28,36 +25,35 @@
 
             if ($resultado) {
                 foreach ($resultado as $Usuario) {
-                    
-                    ?>
-                    <div class="page">
 
-                        <div class="formLogin2">
+    ?>
+                    <div class="box">
+                        <span class="borderLine"></span>
+                        <form action="" method="post">
+                            <h2>Digite sua nova senha</h2>
+                            <div class="inputBox">
+                                <input type="hidden" name="CpfCadastrado" value="<?php echo htmlspecialchars($cpf); ?>">
+                                <input type="password" id="novaSenha" name="NovaSenha" required="required">
+                                <span>Nova Senha</span>
+                                <i></i>
+                            </div>
 
-                            <h1>Olá <?php echo  $Usuario["Usuario"];  ?>
-                                
-                              
-                        
-                        </h1>
+                            <div class="inputBox">
+                                <input type="password" id="confirmarNovaSenha" name="ConfirmarNovaSenha" required="required">
+                                <span>Confirmar Senha</span>
+                                <i></i>
+                            </div>
 
-                            <p>Preencha os campos abaixo para redefinir sua senha</p>
-
-                        </div>  
-
-                        <form action="#" method="post" class="formLogin">
-                            <?php 
-                              
-                                
-                             ?>
-                            <input type="hidden" name="CpfCadastrado" value="<?php echo htmlspecialchars($cpf); ?>">
-                            <input type="password" name="NovaSenha" placeholder="Nova Senha" required>
-                            <input type="password" name="ConfirmarNovaSenha" placeholder="Confirmar Nova Senha" required>
-                            <input type="submit" value="Alterar Senha" class="btn">
+                            <div class="links">
+                                <a href="./Esqueci_Minha_Senha.php"></a>
+                                <a href="./cadastro.php"></a>
+                            </div>
+                            <div class="centralizarButton">
+                                <input type="submit" value="Alterar Senha">
+                            </div>
                         </form>
-
                     </div>
-                    
-                    <?php
+    <?php
                 }
             } else {
                 echo "Usuário não cadastrado";
@@ -71,13 +67,13 @@
 
             if ($novaSenha === $confirmarNovaSenha) {
 
-                
+
 
                 $MudarSenha = $conexao->prepare("UPDATE Perfil SET Senha = :Senha WHERE CPF = :CpfCadastrado");
                 $MudarSenha->bindParam(':Senha', $novaSenha);
                 $MudarSenha->bindParam(':CpfCadastrado', $cpf);
                 $MudarSenha->execute();
-                echo 'Senha Atualizada';
+                header("Location: ./login.php");
             } else {
                 echo "As senhas não são idênticas";
             }
@@ -87,4 +83,19 @@
     }
     ?>
 </body>
+<script>
+    function togglePassword(fieldId) {
+        const passwordField = document.getElementById(fieldId);
+        const eyeIcon = passwordField.nextElementSibling;
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
+        } else {
+            passwordField.type = "password";
+            eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
+        }
+    }
+</script>
+
 </html>

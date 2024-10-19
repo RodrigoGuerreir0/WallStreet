@@ -5,7 +5,7 @@ try {
     $conexao = new PDO("mysql:host=127.0.0.1;dbname=WallStreet", "root", "");
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $query = 'SELECT * FROM Vagas';
+    $query = 'SELECT Latitude, Longitude, StatusDaVaga FROM Vagas';
     $stmt = $conexao->prepare($query);
     $stmt->execute();
 

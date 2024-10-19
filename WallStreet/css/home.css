@@ -1,337 +1,363 @@
-* {
-    margin: 0;
-    padding: 0;
-  }
-  html{
-    background: url("../img/bgE.jpg") no-repeat center center;
-    background-size: cover;
-    height: 92vh;
-  }
-  
-  a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-    cursor: default;
-  }
-  
-  /*a:hover {
-    color: rgb(241, 241, 241);
-    opacity: 0.7;
-    border-radius: 15px;
-  
-  }*/
-
-  .a2{
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-    cursor: default;
-  }
-
-  .a2:hover{
-    color: rgb(241, 241, 241);
-    opacity: 0.7;
-    border-radius: 15px;  
-
-  }
-  
-  .li_A{
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-    cursor: pointer;
-   
-  }
-  
-  .li_A:hover{
-    color: #815fd8;
-  }
-  .imglogo{
-    width: 10%;
-    margin-top: 1vh;
-    cursor: pointer;
+.semLogin {
+  background: url("../img/fundocadastro.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
 }
 
-  .logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-  
-  H4{
-    color: #815fd8;
-  }
-  
-  .fa{
-    width: 20%;
-  }
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
 
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #23232e;
-    height: 15vh;
-    
-  }
-  main{
-    margin-top: 10px;
-    height: 78vh  ;
-  }
-  
+.fas,
+.fa {
+  color: #ffffff;
+  transition: 0.5s;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
 
-  
+.fas:hover,
+.fa:hover {
+  color: #815fd8;
+}
 
-  
-  .nav-list {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-    margin-top: 20px;
-  }
-  .nav-list .liPerf{
-      margin-top: 10px;
+/* Centralização e Estilo do Formulário */
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+  border-radius: 7px;
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+  gap: 10px;
+  margin: 0 auto;
+}
 
+/* Botões */
+.btn:hover,
+.btn2:hover,
+.btn3:hover {
+  background-color: #6a4bbf;
+}
+
+/* Rodapé */
+
+/*login abaixo*/
+
+.footer-col {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.a2 {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.imglogo {
+  color: #415aca;
+  transition: 1.5s;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url("../img/bgE.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.side-menu {
+  display: flex;
+}
+#xxx {
+  opacity: 0;
+  cursor: default;
+}
+
+.a2:hover {
+  color: rgb(241, 241, 241);
+  opacity: 0.7;
+  border-radius: 15px;
+}
+
+.li_A {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.li_A:hover {
+  color: #815fd8;
+}
+
+.imglogo {
+  width: 10%;
+  margin-top: 1vh;
+  cursor: pointer;
+}
+
+H4 {
+  color: #815fd8;
+}
+
+.fa {
+  width: 20%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgb(36, 13, 56),
+    rgb(37, 2, 83),
+    rgb(37, 4, 65)
+  );
+  height: 15vh;
+}
+main {
+  display: flex;
+  height: auto;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-bottom: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+  margin-top: 20px;
+}
+.nav-list .liPerf {
+  margin-top: 10px;
+}
+.nav-list li b {
+  margin-top: 10px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
-  .nav-list li b {
-    margin-top: 10px;
-  }
-  
-  .mobile-menu {
-    display: none;
-    cursor: pointer;
-  }
- 
-  .mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
-    transition: 0.3s;
-  }
-  
-  @media (max-width: 999px) {
-    body {
-      overflow-x: hidden;
-    }
-    .nav-list {
-      position: absolute;
-      top: 8vh;
-      right: 0;
-      width: 50vw;
-      height: 92vh;
-      background: #23232e;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in;
-    }
-    .nav-list li {
-      margin-left: 0;
-      opacity: 0;
-    }
-    .mobile-menu {
-      display: block;
-    }
-  }
-  
-  .nav-list.active {
+  to {
+    opacity: 1;
     transform: translateX(0);
   }
-  
-  @keyframes navLinkFade {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-  }
-  
-  .mobile-menu.active .line2 {
-    opacity: 0;
-  }
-  
-  .mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-  }
-
-
-  .maps{
-    margin-bottom: 0px;
-    /*border-radius: 20px;*/
-    width: 100%;
-    height: 300px;
-    border: solid 0px black;
-    border-color: black;
-  }
-
-  .color{
-    color: #815fd8;
-    transition: 0.8s;
-    cursor: pointer;
-  }
-
-  .color:hover{
-    color: #4800ff;
-
-  }
-  .home{
-    
-      width: 75%;
-      height: 500px;
-    background-color: white;
-  }
-
-
-  /*footer*/
-
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
-footer{
-    background-color: #23232e;
-    padding: 50px 0;
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.maps {
+  margin-bottom: 0px;
+  /*border-radius: 20px;*/
+  width: 100%;
+  height: 300px;
+  border: solid 0px black;
+  border-color: black;
+}
+
+.color {
+  color: #815fd8;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.color:hover {
+  color: #4800ff;
+}
+.home {
+  width: 75%;
+  height: 500px;
+  background-color: white;
+}
+
+/*footer*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+footer {
+  background: linear-gradient(
+    90deg,
+    rgb(36, 13, 56),
+    rgb(37, 2, 83),
+    rgb(37, 4, 65)
+  );
+  padding: 50px 0;
 }
 .footer-text {
-  text-align: center; 
-  margin: 0; 
+  text-align: center;
+  margin: 0;
   padding: 10px 0;
   color: #fff;
 }
-.container-footer{
-    max-width: 1400px;
-    padding: 0 4%;
-    margin: auto;
+.container-footer {
+  max-width: 1400px;
+  padding: 0 4%;
+  margin: auto;
 }
-.row-footer{
-    display: flex;
-    flex-wrap: wrap;
-    align-self: center;
-    justify-content: center;
+.row-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
 }
 
-
-.footer-col{
+.footer-col {
   width: 25%;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
- 
 }
-.footer-col h4{
+.footer-col h4 {
   font-size: 22px;
   color: #815fd8;
   margin-bottom: 15px;
   font-weight: 500;
   position: relative;
   text-transform: uppercase;
-
 }
-.footer-col ul{
-list-style: none;
-padding: 0;
+.footer-col ul {
+  list-style: none;
+  padding: 0;
 }
-.footer-col ul li{
-    margin: 10px 0;
+.footer-col ul li {
+  margin: 10px 0;
 }
-.footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: white;
-    text-decoration: none;
-    font-weight: 300;
-    display: block;
-    transition: all 0.3s ease;
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
 }
-.footer-col ul li a:hover{
-    color: #cecdcd;
-    padding-left: 10px;
+.footer-col ul li a:hover {
+  color: #cecdcd;
+  padding-left: 10px;
 }
-.footer-col .medias-socias{
-    margin-top: 30px;
+.footer-col .medias-socias {
+  margin-top: 30px;
 }
-.footer-col .medias-socias a{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    margin: 0 10px 10px 0;
-    text-decoration: none;
-    border-radius: 50%;
-    color: white;
-    border: 1px solid white;
-    transition: all 0.5s ease;
+.footer-col .medias-socias a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s ease;
 }
-.footer-col .medias-socias a i{
-    font-size: 20px;
-}
-
-.footer-col .medias-socias a:hover{
-    color: #415aca;
-    background-color: white;
-}
-.footer-col .form-sub input{
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
-    outline: none;
-    border: 1px solid white;
-    color: white;
-    background-color: #415aca;
-}
-.footer-col .form-sub input::placeholder{
-    color: white;
-}
-.footer-col .form-sub button{
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px; 
-    font-size: 17px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    color: #415aca;
-    border-radius: 3px;
-    font-weight: bold;
-    background-color: white;        
-}
-/* Responsivo */
-@media (max-width: 800px) {
-    .footer-col{
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-@media (max-width:600px) {
-    .footer-col{
-        width: 100%;
-    }
+.footer-col .medias-socias a i {
+  font-size: 20px;
 }
 
-/*fim footer*/ 
- 
+.footer-col .medias-socias a:hover {
+  color: #415aca;
+  background-color: white;
+}
+.footer-col .form-sub input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  background-color: #415aca;
+}
+.footer-col .form-sub input::placeholder {
+  color: white;
+}
+.footer-col .form-sub button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #415aca;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: white;
+}
 
+/*fim footer*/
 
 /* Estilo para a área de cadastro de veículo */
 .vehicle-registration {
@@ -405,31 +431,31 @@ padding: 0;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    width: 100%;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .form-group label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #333;
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #333;
 }
 
 .form-group input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input[type="number"]:focus {
-    border-color: #590064;
-    box-shadow: 0 0 0 0.2rem rgba(89, 3, 160, 0.25);
-    outline: none;
+  border-color: #590064;
+  box-shadow: 0 0 0 0.2rem rgba(89, 3, 160, 0.25);
+  outline: none;
 }
 
 .form-group input[type="select"] {
@@ -451,9 +477,10 @@ padding: 0;
 .map1Tela {
   margin-top: 10px;
   width: 100%;
-  height: 48vh;
+  height: 45vh;
   border-radius: 25px;
   border: solid 1px black;
+  margin-bottom: 20px;
 }
 
 .map2Tela {
@@ -461,59 +488,2777 @@ padding: 0;
   height: 400px;
 }
 
-.endereco{
-  padding: 15px;
-  margin-right: 95px;
-  width: 30%;
-  height: 68vh;
+.endereco {
+  padding: 25px;
+  width: 45%;
+  height: 83vh;
   float: right;
   background-color: #fff;
   border-radius: 25px;
-  margin-top: -68vh;
+  margin-top: 1vh;
+  text-align: center;
+  margin-left: 10%;
 }
 
-.endereco input{
-    width: 100%;
-    height: 7%;
-    margin-top: 20px;
-    border-radius: 50pc;
-    text-align: center;
-
+.endereco button {
+  width: 100%;
 }
 
-  input::placeholder {
+.endereco input {
+  width: 100%;
+  height: 9%;
+  margin-top: 20px;
+  border-radius: 50pc;
+  text-align: center;
+  overflow: unset;
+}
+
+input::placeholder {
   text-align: center; /* Garante que o placeholder esteja centralizado */
-  
 }
 
-.endereco input:hover{
+.endereco input:hover {
   transform: scale(1.02);
 }
 
-
-
-.cadastroEndereço{
-padding: 20vh;
+.cadastroEndereço {
+  padding: 20vh;
 }
 
-.boxmap{
+.boxmap {
+  margin-top: 1vh;
+  float: left;
   padding: 15px;
   width: 50%;
-  height: 68vh;
-  margin-left: 95px;
+  height: 83vh;
   background-color: #ffffff;
   border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  /* Outras propriedades aqui se necessário */
 }
 
-.pesquisa{
-    height: 50px;
+/*responsivo*/
+
+@media (max-width: 1669px) {
+  .endereco input {
+    height: 6.5vh;
+  }
+
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
-.pesquisa input{  
+@media (max-width: 1385px) {
+  .endereco {
+    margin-left: 10%;
+    width: 45%;
+  }
+
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1210px) {
+  .endereco {
+    margin-left: 10%;
+    width: 45%;
+  }
+
+  .endereco input {
+    height: 6.5vh;
+  }
+
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1171px) {
+  .endereco {
+    margin-left: 10%;
+    width: 45%;
+  }
+
+  .endereco input {
+    height: 6vh;
+  }
+
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1143px) {
+  .boxmap label {
+    font-size: 15px;
+  }
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1111px) {
+  .boxmap label {
+    font-size: 14.5px;
+  }
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1072px) {
+  .boxmap .scrollbtn1 {
+    width: 45%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 8.6%;
+  }
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1069px) {
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .endereco {
+    margin-left: 10%;
+    width: 45%;
+  }
+
+  .endereco input {
+    height: 6vh;
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 45%;
+  }
+
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 4.7%;
+  }
+}
+
+@media (max-width: 1130px) {
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .endereco {
+    margin-left: 10%;
+    width: 45%;
+  }
+
+  .endereco input {
+    height: 6vh;
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 45%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 8.7%;
+  }
+}
+
+@media (max-width: 1107px) {
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap #cepInput {
+    width: 59.9%;
+  }
+  .endereco {
+    margin-left: 10%;
+    width: 45%;
+  }
+
+  .endereco input {
+    height: 6vh;
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 45%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 8.7%;
+  }
+}
+
+@media (max-width: 1101px) {
+  .boxmap .btn {
+    font-size: 12px;
+  }
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1051px) {
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap .pesquisa {
+    width: 100%;
+    display: flex;
+  }
+
+  .pesquisa #cepInput {
+    width: 70%;
+  }
+
+  .boxmap .btn {
+    width: 35%;
+    margin-left: 10%;
+  }
+
+  .endereco {
+    margin-left: 10%;
+    width: 45%;
+  }
+
+  .endereco input {
+    height: 6vh;
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 45%;
+    margin-right: 4%;
+  }
+
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 4.7%;
+  }
+}
+
+@media (max-width: 1043px) {
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap .pesquisa {
+    width: 100%;
+    display: flex;
+  }
+
+  .pesquisa #cepInput {
+    width: 70%;
+  }
+
+  .boxmap .btn {
+    width: 35%;
+    margin-left: 10%;
+  }
+
+  .endereco {
+    margin-left: 10%;
+    width: 45%;
+  }
+
+  .endereco input {
+    height: 6vh;
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 45%;
+    margin-right: 4%;
+  }
+
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 4.7%;
+  }
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+    max-width: 999px;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: -06%;
+  }
+
+  /* Estilos para o menu móvel */
+
+  /* Estilos para o menu móvel */
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: 12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  /* Estilo para itens do menu lateral */
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  /* Estilo para ícones dentro do menu lateral */
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  /* Estilos adicionais que você mencionou */
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 38%;
+  }
+  .endereco input[type="text"] {
+    height: 4vh;
+  }
+  .endereco input[type="number"] {
+    height: 4vh;
+  }
+
+  .endereco #endereco0 {
+    height: 4vh;
+    width: 3%;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 32vh;
+  }
+}
+
+@media (max-width: 853px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-left: -5%;
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: -12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 155vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 60vh;
+  }
+  .endereco h1 {
+    font-size: 26px;
+  }
+  .map2Tela {
+    margin-top: 0px;
+  }
+  .boxprimary {
+    height: 13vh;
+  }
+  .boxsecond {
+    height: 9.9vh;
+  }
+
+  .boxscroll label {
+    font-size: 18px;
+  }
+
+  .boxscroll input[type="radio"] {
+    margin-top: 4.5vh;
+  }
+  .endereco input[type="text"] {
+    height: 5vh;
+  }
+  .endereco input[type="number"] {
+    height: 5vh;
+  }
+  .endereco .btn2 {
+    height: 5vh;
+  }
+
+  footer {
+    height: 40vh;
+  }
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 820px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-left: -5%;
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: -12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 155vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 45%;
+  }
+  .endereco h1 {
+    font-size: 26px;
+  }
+  .map2Tela {
+    margin-top: 0px;
+  }
+  .boxprimary {
+    height: 13vh;
+  }
+  .boxfirst {
+    height: 13vh;
+    margin-bottom: 10px;
+  }
+  .boxsecond {
+    height: 13vh;
+  }
+
+  .boxscroll label {
+    font-size: 18px;
+  }
+
+  .boxscroll input[type="radio"] {
+    margin-top: 50px;
+  }
+  .endereco input[type="text"] {
+    height: 4vh;
+  }
+  .endereco input[type="number"] {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 5vh;
+  }
+
+  footer {
+    height: 40vh;
+  }
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-left: -5%;
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: -12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 64vh;
+  }
+  .map2Tela {
+    margin-top: 0px;
+  }
+  .boxprimary {
+    height: 13vh;
+  }
+
+  .boxscroll label {
+    font-size: 1rem;
+  }
+
+  .boxscroll input[type="radio"] {
+    margin-top: 50px;
+  }
+  .endereco input[type="text"] {
+    height: 5vh;
+  }
+  .endereco input[type="number"] {
+    height: 5vh;
+  }
+  .endereco .btn2 {
+    height: 5vh;
+  }
+
+  footer {
+    height: 52vh;
+  }
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 678px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: -12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 38%;
+  }
+  .endereco input[type="text"] {
+    height: 4vh;
+  }
+  .endereco input[type="number"] {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 52vh;
+  }
+}
+
+@media (max-width: 602px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+
+  .logo {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: -12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 38%;
+  }
+  .endereco input[type="text"] {
+    height: 4vh;
+  }
+  .endereco input[type="number"] {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 52vh;
+  }
+}
+
+@media (max-width: 540px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+
+  .logo {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: -12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 170vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .boxscroll {
+    height: 20vh;
+  }
+  .boxsecond {
+    height: 15vh;
+  }
+  .boxmap label {
+    font-size: 12px;
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 65vh;
+  }
+  .endereco input[type="text"] {
+    height: 4vh;
+  }
+  .endereco input[type="number"] {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 525px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+
+  .logo {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: -12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .boxmap label {
+    font-size: 15px;
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 38%;
+  }
+  .endereco input[type="text"] {
+    height: 4vh;
+  }
+  .endereco input[type="number"] {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 52vh;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: 12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 38%;
+  }
+  .endereco input[type="text"] {
+    height: 4vh;
+  }
+  .endereco input[type="number"] {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 52vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .boxmap {
+    width: 100%; /* A largura se ajusta para 100% em dispositivos móveis */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 10px; /* Ajusta o padding para dispositivos móveis */
+  }
+}
+
+@media (max-width: 430px) {
+  .endereco input[type="text"] {
+    height: 5vh;
+  }
+  .endereco input[type="number"] {
+    height: 5vh;
+  }
+}
+
+@media (max-width: 421px) {
+  .boxmap {
+    width: 100%; /* A largura se ajusta para 100% em dispositivos móveis */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 10px; /* Ajusta o padding para dispositivos móveis */
+  }
+  footer {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 414px) {
+  main {
+    margin-bottom: 20%;
+  }
+
+  .imglogo {
+    width: 30%;
+  }
+  .boxmap {
+    width: 100%; /* A largura se ajusta para 100% em dispositivos móveis */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 10px; /* Ajusta o padding para dispositivos móveis */
+  }
+  .main .boxmapAdmG {
+    width: 100%; /* A largura se ajusta para 100% em dispositivos móveis */
+    height: 80%; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 10px; /* Ajusta o padding para dispositivos móveis */
+  }
+
+  .boxmapAdmG .pesquisa {
+    width: 100%;
+    display: flex;
+  }
+
+  .boxmapAdmG label {
+    font-size: 12px;
+  }
+  .boxmapAdmG .scrollbtn1 {
+    width: 43%;
+  }
+  .boxmapAdmG .scrollbtn2 {
+    width: 43%;
+    margin-left: 8%;
+  }
+  .boxmapAdmG input[type="text"] {
+    width: 0%;
+  }
+  .boxmapAdmG .btn {
+    width: 30%;
+  }
+
+  .vagas #NumeroVaga {
+    width: 25%;
+    font-size: 10px;
+  }
+  .vagas #LongitudeVaga {
+    width: 25%;
+    font-size: 10px;
+  }
+  .vagas #LatitudeVaga {
+    width: 25%;
+    font-size: 10px;
+  }
+
+  .boxsecond {
+    height: 12.5vh;
+  }
+  .endereco {
+    height: 62vh;
+    margin-bottom: 10%;
+  }
+  .endereco input[type="text"] {
+    height: 4vh;
+  }
+  .endereco input[type="number"] {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+  footer {
+    height: 55vh;
+  }
+  main .usuarios-section {
+    height: 45vh;
+  }
+
+  main .scrolluser {
+    height: 100%;
+  }
+
+  .scrolluser .usuario-item b {
+    font-size: 25px;
+  }
+
+  .scrolluser .inline {
+    margin-top: -20vh;
+  }
+
+  .scrolluser .scrollbtn3 {
+    width: 44%;
+  }
+  .scrolluser .scrollbtn4 {
+    width: 44%;
+  }
+}
+
+@media (max-width: 409px) {
+  .boxmap {
+    width: 100%; /* A largura se ajusta para 100% em dispositivos móveis */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 10px; /* Ajusta o padding para dispositivos móveis */
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 44%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 44%;
+    margin-left: 6.6%;
+  }
+  footer {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 390px) {
+  main {
+    height: 170vh;
+  }
+  .boxmap {
+    width: 100%; /* A largura se ajusta para 100% em dispositivos móveis */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 10px; /* Ajusta o padding para dispositivos móveis */
+  }
+  .boxmap .scrollbtn1 {
+    width: 44%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 44%;
+    margin-left: 6%;
+  }
+  footer {
+    height: 55vh;
+  }
+
+  .map2Tela {
+    margin-top: 10%;
+  }
+  .endereco {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 384px) {
+  .boxmap {
+    width: 100%; /* A largura se ajusta para 100% em dispositivos móveis */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 10px; /* Ajusta o padding para dispositivos móveis */
+  }
+  .boxmap .scrollbtn1 {
+    width: 44%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 44%;
+    margin-left: 6%;
+  }
+  footer {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    overflow-y: scroll;
+  }
+
+  header {
+    position: fixed;
+    z-index: 999;
+  }
+  nav {
+    width: 100%;
+    padding-right: 40px;
+  }
+  main {
+    position: relative;
+    margin-top: 20vh;
+  }
+
+  /* .pesquisa #cepInput{
+    width: 60%;
+  } */
+  /* .pesquisa #LocalizarC{
+    width: 60%;
+  } */
+
+  .boxmapAdmG .pesquisa {
+    width: 100%;
+    display: flex;
+  }
+
+  .imglogo {
+    margin-left: -5%;
+    width: 30%;
+  }
+  .side-menu {
+    height: 25vh;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -15%; /* Fora da tela por padrão */
+    width: 15%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+  main {
+    height: 180vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .boxmap {
+    margin-top: 2vh;
+    width: 100%;
+    height: 92vh;
+    padding: 10px;
+  }
+  .boxmapAdmG {
+    margin-top: 1vh;
+    width: 100%;
+    height: 92vh;
+    padding: 10px;
+  }
+  .boxmap label {
+    font-size: 12px;
+  }
+  .boxmap .scrollbtn1 {
+    width: 43%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 43%;
+    margin-left: 8%;
+  }
+  .boxmapAdmG label {
+    font-size: 12px;
+  }
+  .boxmapAdmG .scrollbtn1 {
+    width: 43%;
+  }
+  .boxmapAdmG .scrollbtn2 {
+    width: 43%;
+    margin-left: 8%;
+  }
+  .boxmapAdmG input[type="text"] {
+    width: 0%;
+  }
+  .boxmapAdmG .btn {
+    width: 30%;
+  }
+
+  .endereco {
+    margin-top: 10%;
+    height: 80vh;
+    font-size: 15px;
+  }
+  .endereco input[type="text"] {
+    height: 5vh;
+  }
+  .endereco input[type="number"] {
+    height: 5vh;
+  }
+  .endereco .btn2 {
+    height: 5vh;
+  }
+  .map2Tela {
+    margin-top: 5%;
+    height: 50vh;
+  }
+
+  .vagas #NumeroVaga {
+    width: 25%;
+    font-size: 10px;
+  }
+  .vagas #LongitudeVaga {
+    width: 25%;
+    font-size: 10px;
+  }
+  .vagas #LatitudeVaga {
+    width: 25%;
+    font-size: 10px;
+  }
+
+  main .usuarios-section {
+    height: 70vh;
+  }
+
+  main .scrolluser {
+    height: 100%;
+  }
+
+  main .scroll {
+    height: 30vh;
+  }
+
+  .boxmapAdmG .boxscroll {
+    height: 119.47px;
+  }
+  .boxmapAdmG .boxscroll input[type="radio"] {
+    margin-top: 7.3vh;
+  }
+  .boxmapAdmG .boxfirst {
+    height: 114.88px;
+    margin-bottom: 9px;
+  }
+  .boxmapAdmG .boxsecond {
+    height: 114.88px;
+    margin-bottom: 9px;
+  }
+  .boxmapAdmG .boxsecond label {
+    height: 92px;
+    padding: 10px;
+    padding-left: 0px;
+  }
+  .boxmapAdmG .boxsecond .vaga-item {
+    height: 100%;
+    padding: 10px;
+    padding-left: 0px;
+  }
+
+  .scrolluser .scroll {
+    height: 137.84px;
+  }
+  .scrolluser .boxsecond {
+    height: 114.88px;
+    margin-bottom: 9px;
+  }
+
+  .scrolluser .usuario-item p {
+    display: flex;
+    flex-direction: column;
+  }
+  .scrolluser .usuario-item b {
+    font-size: 25px;
+  }
+  .scrolluser .usuario-item font {
+    font-size: 15px;
+  }
+
+  /* main .inline{
+    float:;
+  } */
+
+  .scrolluser .scrollbtn3 {
+    width: 44%;
+  }
+  .scrolluser .scrollbtn4 {
+    width: 44%;
+  }
+
+  footer {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 371px) {
+  .imglogo {
+    margin-left: -5%;
+    width: 30%;
+  }
+  .side-menu {
+    height: 25vh;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: 12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+  main {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 2vh;
+    width: 100%;
+    height: 92vh;
+    padding: 10px;
+  }
+  .endereco input[type="text"] {
+    height: 5vh;
+  }
+  .endereco input[type="number"] {
+    height: 5vh;
+  }
+
+  .boxmap label {
+    font-size: 12px;
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 43%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 43%;
+    margin-left: 8.5%;
+  }
+
+  .endereco {
+    margin-top: 10px;
+    height: 80vh;
+    font-size: 15px;
+  }
+
+  .map2Tela {
+    margin-top: 5%;
+    height: 30vh;
+  }
+  footer {
+    height: 68vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .imglogo {
+    margin-left: -5%;
+    width: 30%;
+  }
+  .side-menu {
+    height: 25vh;
+  }
+
+  #xxx {
+    opacity: 1;
+    color: #fff;
+    margin-top: 6vh;
+  }
+  #ico {
+    margin-top: 20vh;
+  }
+
+  /* Estilos para as linhas do menu móvel */
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Garante que o menu esteja fixo em relação à janela de visualização */
+    top: 0;
+    right: -12%; /* Fora da tela por padrão */
+    width: 12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+    overflow: hidden; /* Evita que o conteúdo do menu lateral ultrapasse seus limites */
+  }
+  main {
+    height: 165vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .boxmap {
+    margin-top: 2vh;
+    width: 100%;
+    height: 85vh;
+    padding: 10px;
+  }
+
+  .boxmap label {
+    font-size: 12px;
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 44%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 44%;
+    margin-left: 6.2%;
+  }
+
+  .endereco {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 60vh;
+    font-size: 15px;
+  }
+
+  .map2Tela {
+    margin-top: 10%;
+    height: 30vh;
+  }
+  footer {
+    height: 68vh;
+  }
+}
+
+@media (max-width: 354px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Mude de absolute para fixed para garantir que o menu esteja sempre em relação à janela de visualização */
+    top: 0;
+    margin-top: 15vh;
+    right: -110px; /* Fora da tela por padrão */
+    width: 110px;
+    height: 20%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 45%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 4.6%;
+  }
+  .end ereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 38%;
+  }
+  .endereco input {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 54vh;
+  }
+}
+
+@media (max-width: 344px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 30%;
+  }
+
+  /* Estilos para o menu móvel */
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Mude de absolute para fixed para garantir que o menu esteja sempre em relação à janela de visualização */
+    top: 0;
+    margin-top: 0vh;
+    right: -12%; /* Fora da tela por padrão */
+    width: 12%;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 170vh;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .boxmap label {
+    font-size: 14px;
+  }
+  .boxsecond {
+    height: 13vh;
+  }
+  .boxmap .scrollbtn1 {
+    width: 45%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 4%;
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 70vh;
+  }
+  .endereco input {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 54vh;
+  }
+
+  .map2Tela {
+    margin-top: 20%;
+  }
+}
+
+@media (max-width: 321px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Mude de absolute para fixed para garantir que o menu esteja sempre em relação à janela de visualização */
+    top: 0;
+    margin-top: 15vh;
+    right: -110px; /* Fora da tela por padrão */
+    width: 110px;
+    height: 20%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 160vh;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 45%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 4.6%;
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 38%;
+  }
+  .endereco input {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-height: 1368px) and (min-height: 1367px) {
+  body {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+  }
+
+  html {
+    position: static;
+  }
+
+  .imglogo {
+    width: 20%;
+  }
+
+  /* Estilos para o menu móvel */
+  .mobile-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* Estilos para a aba lateral */
+  .side-menu {
+    position: fixed; /* Mude de absolute para fixed para garantir que o menu esteja sempre em relação à janela de visualização */
+    top: 0;
+
+    right: -110px; /* Fora da tela por padrão */
+    width: 110px;
+    height: 100%; /* Ajusta a altura para ocupar toda a altura da tela */
+    background-color: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 20px;
+  }
+
+  .side-menu .menu-item {
+    color: white;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  .side-menu .menu-item i {
+    font-size: 22px;
+  }
+
+  /* Estilo quando o menu está aberto */
+  .side-menu.open {
+    right: 0;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-list {
+    width: 80vw;
+    top: 5vh;
+  }
+  .nav-list li {
+    opacity: 1;
+    animation: navLinkFade 0.3s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 140vh;
+  }
+  .boxmap {
+    margin-top: 5vh;
+    width: 100%; /* Ajusta a largura para telas de smartphones em orientação paisagem */
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+  }
+  .boxsecond {
+    height: 10vh;
+  }
+  .boxmap input[type="radio"] {
+    margin-top: 4.5vh;
+  }
+  .boxsecond label {
+    font-size: 20px;
+  }
+
+  .boxmap .scrollbtn1 {
+    width: 45%;
+  }
+  .boxmap .scrollbtn2 {
+    width: 45%;
+    margin-left: 4.6%;
+  }
+  .endereco {
+    padding: 25px;
+    margin-top: 5vh;
+    width: 100%;
+    margin-left: 0%;
+    height: 50vh;
+  }
+  .endereco input {
+    height: 4vh;
+  }
+  .endereco .btn2 {
+    height: 4vh;
+  }
+
+  footer {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .boxmap {
+    height: 95vh;
+  }
+  .boxmap .boxscroll {
+    height: 18vh;
+  }
+  .boxsecond {
+    height: 18vh;
+  }
+  .boxmap input[type="radio"] {
+    margin-top: 8vh;
+  }
+  .boxmap label {
+    font-size: 14px;
+  }
+  .endereco {
+    height: 95vh;
+  }
+}
+
+@media (max-width: 820px) and (max-height: 1180px) {
+  .boxmap {
+    height: 95vh;
+  }
+  .boxmap .boxscroll {
+    height: 18vh;
+  }
+  .boxsecond {
+    height: 18vh;
+  }
+  .endereco input[type="text"] {
+    height: 5vh;
+  }
+  .endereco input[type="number"] {
+    height: 5vh;
+  }
+  .endereco input[type="radio"] {
+    margin-top: 8vh;
+    height: 5vh;
+  }
+  .boxmap label {
+    font-size: 14px;
+  }
+  .endereco {
+    height: 95vh;
+  }
+
+  .map2Tela {
+    margin-top: 10%;
+  }
+}
+
+@media (min-height: 799px) and (max-height: 800px) {
+  .boxmap {
+    height: 90vh;
+  }
+  .boxmap .boxscroll {
+    height: 18vh;
+  }
+  .boxmap label {
+    font-size: 16px;
+  }
+  .boxsecond {
+    height: 15vh;
+  }
+  .boxmap input[type="radio"] {
+    margin-top: 7vh;
+  }
+  .endereco input[type="text"] {
+    height: 7.5vh;
+  }
+  .endereco input[type="number"] {
+    height: 7.5vh;
+  }
+  .endereco {
+    height: 90vh;
+  }
+}
+
+/*fim responsivo*/
+
+.pesquisa {
+  display: inline;
+  height: 50px;
+}
+
+.pesquisa input {
   height: 50px;
   width: 60%;
   border-radius: 50pc;
-  border: solid 1px black;  
+  border: solid 1px black;
+  text-align: center;
 }
 
 .btn {
@@ -524,10 +3269,10 @@ padding: 20vh;
   border: none !important;
   transition: all linear 160ms;
   cursor: pointer;
-  width: 35%;
+  width: 30%;
   height: 50px;
   border-radius: 50pc;
-  margin-left: 35px;
+  margin-left: 9%;
 }
 
 .btn2 {
@@ -539,22 +3284,536 @@ padding: 20vh;
   transition: all linear 160ms;
   cursor: pointer;
   width: 100%;
+  height: 8vh;
+  border-radius: 50pc;
+  margin-top: 15px;
+}
+
+.btn3 {
+  background-color: #815fd8;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  width: 100%;
   height: 50px;
   border-radius: 50pc;
- 
   margin-top: 15px;
-
 }
 
 .btn:hover {
   transform: scale(1.05);
   background-color: #6a4bbf;
-
 }
 
 .btn2:hover {
+  transform: scale(1.02);
+  background-color: #6a4bbf;
+}
+.btn3:hover {
   transform: scale(1.05);
   background-color: #6a4bbf;
-
 }
 
+.boxscroll {
+  padding-left: 5px;
+  margin-top: 0px;
+  overflow-y: scroll;
+  overflow: hidden;
+  height: 14vh;
+  border: solid 2px #6a4bbf;
+  border-radius: 20px;
+}
+
+.boxsecond {
+  padding: 5px;
+  display: flex;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-left: 5px solid #590064;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  float: left;
+  margin-top: 6vh;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+input[type="radio"]:checked {
+  accent-color: #590064; /* Cor do círculo interno (padrão moderno) */
+}
+
+/* Aumenta o tamanho do botão de rádio */
+input[type="radio"] {
+  -webkit-transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  -moz-transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  -ms-transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  -o-transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  margin-right: 10px; /* Adiciona espaçamento entre o botão e o texto, opcional */
+}
+
+.scrollbtn1 {
+  width: 45%;
+  height: 5vh;
+  border-radius: 50pc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #815fd8;
+}
+
+.scrollbtn1:hover {
+  transform: scale(1.02);
+  background-color: #6a4bbf;
+}
+
+.scrollbtn2:hover {
+  transform: scale(1.02);
+  background-color: #6a4bbf;
+}
+
+.scrollbtn2 {
+  width: 45%;
+  height: 5vh;
+  border-radius: 50pc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #815fd8;
+  margin-left: 9%;
+}
+
+.spaceB {
+  margin-top: 8px;
+  width: 100%;
+  display: block;
+  padding: 5px;
+}
+
+.infoS {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.pesquisa {
+  display: inline;
+  height: 50px;
+}
+
+.pesquisa input {
+  height: 50px;
+  width: 60%;
+  border-radius: 50pc;
+  border: solid 1px black;
+  text-align: center;
+}
+
+.btn {
+  background-color: #815fd8;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  width: 30%;
+  height: 50px;
+  border-radius: 50pc;
+  margin-left: 9%;
+}
+
+.btn2 {
+  background-color: #815fd8;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  width: 100%;
+  height: 8vh;
+  border-radius: 50pc;
+  margin-top: 15px;
+}
+
+.btn3 {
+  background-color: #815fd8;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  border-radius: 50pc;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #6a4bbf;
+}
+
+.btn2:hover {
+  transform: scale(1.02);
+  background-color: #6a4bbf;
+}
+.btn3:hover {
+  transform: scale(1.05);
+  background-color: #6a4bbf;
+}
+
+.boxscroll {
+  padding-left: 5px;
+  margin-top: 0px;
+  overflow-y: scroll;
+  overflow: hidden;
+  height: 13vh;
+  border: solid 2px #6a4bbf;
+  border-radius: 20px;
+}
+
+.boxsecond {
+  padding: 5px;
+  display: flex;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-left: 5px solid #590064;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  float: left;
+  margin-top: 5.5vh;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+input[type="radio"]:checked {
+  accent-color: #590064; /* Cor do círculo interno (padrão moderno) */
+}
+
+/* Aumenta o tamanho do botão de rádio */
+input[type="radio"] {
+  -webkit-transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  -moz-transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  -ms-transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  -o-transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  transform: scale(1.5); /* Ajuste o valor conforme necessário */
+  margin-right: 10px; /* Adiciona espaçamento entre o botão e o texto, opcional */
+}
+
+.scrollbtn1 {
+  width: 45%;
+  height: 5vh;
+  border-radius: 50pc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #815fd8;
+}
+
+.scrollbtn1:hover {
+  transform: scale(1.02);
+  background-color: #6a4bbf;
+}
+
+.scrollbtn2:hover {
+  transform: scale(1.02);
+  background-color: #6a4bbf;
+}
+
+.scrollbtn2 {
+  width: 45%;
+  height: 5vh;
+  border-radius: 50pc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #815fd8;
+  margin-left: 9%;
+}
+
+.spaceB {
+  margin-top: 8px;
+  width: 100%;
+  display: block;
+  padding: 5px;
+}
+
+.infoS {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/*ADM GERAL*/
+
+.boxmap-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.boxmapAdmG,
+.form-container {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.boxmapAdmG {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 20px;
+  height: 90%;
+  margin-top: 1vh;
+}
+
+.boxmapAdmG .btn {
+  margin-left: 9.6%;
+}
+
+.container {
+  width: 100%;
+  height: 165vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  height: 25vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.vagas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.spaceBoxVagas {
+  margin-top: 2%;
+  width: 100%;
+}
+
+.spaceBoxVagas input[type="submit"] {
+  margin-top: 20px;
+  background-color: #815fd8;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  height: 15%;
+  border-radius: 50pc;
+  margin-top: 15px;
+}
+
+.spaceBoxVagas input:hover[type="submit"] {
+  transform: scale(1.01);
+  background-color: #6a4bbf;
+}
+
+.form-container input[type="number"] {
+  height: 5vh;
+  border-radius: 20px;
+  width: 30%;
+  margin-right: 4.5%;
+  text-align: center;
+}
+.spaceBoxVagas input:hover[type="number"] {
+  transform: scale(1.05);
+  border: solid 2px #6a4bbf;
+}
+
+#LongitudeVaga {
+  margin-left: 4.5%;
+}
+.form-container input[type="text"] {
+  height: 5vh;
+  border-radius: 20px;
+  width: 30%;
+  text-align: center;
+}
+.spaceBoxVagas input:hover[type="text"] {
+  transform: scale(1.05);
+  border: solid 2px #6a4bbf;
+}
+
+.form-container input[type="submit"] {
+  margin-top: 15px;
+  height: 5vh;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.scroll {
+  margin-top: 5vh;
+  height: 15vh;
+  overflow-y: hidden;
+  border: solid 2px #815fd8;
+  border-radius: 20px;
+}
+
+.scroll input[type="radio"] {
+  margin-left: 1vh;
+  margin-top: 6.5vh;
+}
+
+.vaga-item {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow-y: hidden;
+}
+
+label {
+  width: 100%;
+}
+
+/* .boxmapAdmG .boxsecond{
+  height: 12.5vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+} */
+
+/* .scrolluser .boxsecond{
+  height: 14.5vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+} */
+
+.boxscroll .usuario-item {
+  width: 100%;
+  height: 95%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow-y: hidden;
+}
+
+.scrolluser .usuario-item {
+  width: 100%;
+  height: 95%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow-y: hidden;
+}
+.usuario-item p {
+  margin-bottom: 5px;
+}
+.usuario-item B {
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #815fd8;
+}
+.inline0 {
+  margin-top: -7vh;
+  float: right;
+}
+.inline0 button {
+  border: none;
+}
+.inline {
+  margin-top: -12vh;
+  float: right;
+}
+
+.inline button {
+  border: none;
+}
+
+.fa-user {
+  color: #fff;
+}
+
+.boxscroll .fas {
+  color: #815fd8;
+}
+.boxscroll .fas:hover {
+  color: #6a4bbf;
+}
+
+.scrolluser .fas,
+.scrolluser .fa {
+  border: none;
+  color: #815fd8;
+  transition: 0.5s;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.inline .fas:hover,
+.fa:hover {
+  color: #6a4bbf;
+}
+.spaceB {
+  margin-top: 20px;
+}
+
+.scrollbtn3 {
+  width: 45%;
+  height: 7vh;
+  border-radius: 50pc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #815fd8;
+}
+
+.scrollbtn4 {
+  width: 45%;
+  height: 7vh;
+  border-radius: 50pc;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #815fd8;
+  margin-left: 9%;
+}
+
+.usuarios-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.scrolluser {
+  width: 100%;
+  height: 38vh;
+  overflow-y: auto;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 20px;
+  overflow: unset;
+}
+.scrolluser h1 {
+  text-align: center;
+}

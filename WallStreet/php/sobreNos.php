@@ -1,14 +1,29 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['Usuario'])) {
+
+ echo "<title>Faça seu Login</title>";
+ echo "<link rel='stylesheet' href='../css/home.css'>";
+ echo "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>"; // Inclua o Font Awesome
+
+ echo "<div class='semLogin'>";
+ echo "<div class='page'>";
+ echo "<form action='login.php' method='post' id='loginForm' class='formLogin'>";
 ?>
 
-    <!-- Caso a pessoa não esteja logada, só irá aparecer o que estiver dentro desse if acima -->
-
-    <h2>Você ainda não está logado. Faça seu login</h2>
+    <!-- Adiciona o ícone de fechamento no topo do formulário -->
+   
+    <img src="../img/SemLogin.png" alt="" width="40%" class="imgSl">
+    <h1>Você ainda não está logado. Faça seu login</h1>
+    <button type="submit" class="btn3">Login</button>
     <a href="./login.php">Login</a>
 <?php
     exit();
+    
+ echo "</form>";
+ echo "</div>";
+ echo "</div>";
 }
 ?>
 <!DOCTYPE html>

@@ -1,9 +1,28 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['Usuario'])) {
-    echo "<h2>Você ainda não está logado. Faça seu login.</h2>";
-    echo '<a href="./login.php">Login</a>';
+
+    echo "<title>Faça seu Login</title>";
+    echo "<link rel='stylesheet' href='../css/home.css'>";
+    echo "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>"; // Inclua o Font Awesome
+    echo "<div class='semLogin'>";
+    echo "<div class='page'>";
+    echo "<form action='login.php' method='post' id='loginForm' class='formLogin'>";
+?>
+
+    <!-- Adiciona o ícone de fechamento no topo do formulário -->
+
+    <img src="../img/SemLogin.png" alt="" width="40%" class="imgSl">
+    <h1>Você ainda não está logado. Faça seu login</h1>
+    <button type="submit" class="btn3">Login</button>
+    <a href="./login.php">Login</a>
+<?php
     exit();
+
+    echo "</form>";
+    echo "</div>";
+    echo "</div>";
 }
 
 $conexao = new PDO("mysql:host=127.0.0.1;dbname=WallStreet", "root", "");
@@ -39,6 +58,7 @@ $usuario = $_SESSION['Usuario'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -51,7 +71,7 @@ $usuario = $_SESSION['Usuario'];
         <nav>
             <img src="../img/logoWall.png" class="imglogo" alt="" onclick="redirectToHome()">
             <a class="logo" href="">
-                <font class="a2">Bem-vindo ao seu perfil, </font>
+                <font class="a2">Bem-vindo ao seu perfil </font>
                 <font class="color"><?php echo $_SESSION['Usuario']; ?></font>!
             </a>
 
@@ -63,9 +83,6 @@ $usuario = $_SESSION['Usuario'];
 
             <ul class="nav-list">
                 <li><a class="li_A" href="inicio.php"><i class="fas fa-home fa-2x"></i></a></li>
-                <!--
-                <li><a class="li_A" href="" id="contato-link"><b>Mapa</b></a></li>
-            -->
             </ul>
         </nav>
     </header>
@@ -78,6 +95,10 @@ $usuario = $_SESSION['Usuario'];
             <form action="" method="post" class="formLogin">
 
                 <div class="profile-container">
+
+
+
+
                     <?php
                     $conexao = new PDO("mysql:host=127.0.0.1;dbname=WallStreet", "root", "");
 
@@ -90,86 +111,113 @@ $usuario = $_SESSION['Usuario'];
                     ?>
                             <div class="profile-card">
                                 <div class="profile-header">
-                                    <h1><?php echo $LinhasDoBanco["Nome"]; ?></h1>
-                                    <p class="username"><?php echo $LinhasDoBanco["Usuario"]; ?></p>
-                                </div>
-                                <div class="profile-body">
-                                    <p><b>CPF:</b> <?php echo $LinhasDoBanco["CPF"]; ?></p>
-                                    <br>
-                                    <p><b>Email:</b> <?php echo $LinhasDoBanco["Email"]; ?></p>
-                                    <br>
-                                    <p><b>Telefone:</b> <?php echo $LinhasDoBanco["Telefone"]; ?></p>
-                                </div>
 
-                                <div class="profile-actions">
+                                    <div class="profile-img-container">
+                                        <img src="../img/imgProfile.png" alt="Imagem do Perfil" class="imgPerfil">
+                                        <div class="change-img-icon">
+                                            <i class="fas fa-camera"></i> <!-- Ícone para trocar a imagem -->
+                                        </div>
+                                    </div>
 
-                                    <form action="EditarPerfil.php" method="post">
+                                    <h1><?php echo "<div class='maiusculas'><b>" . $LinhasDoBanco["Nome"] . "</b></div>" ?></h1>
+                                    <p class="username"><?php echo "<font class='username'><b>" . $LinhasDoBanco["Usuario"] . "</b></font>"; ?></p>
 
-                                    </form>
-                                    <form action="EditarPerfil.php" method="post">
-                                        <input type="hidden" name="Codigo" value="<?php echo $LinhasDoBanco["id"]; ?>">
-
-                                        <button type="submit" class="btn">Editar Perfil</button>
-                                    </form>
-
-                                    <form action="deslogar.php" method="post">
-                                        <button type="submit" class="btn2">Sair</button>
-                                    </form>
-
+                                    <div class="profile-body">
+                                        <p><b class="Bperfil">CPF</b><br> <?php echo "<font class='dadosPerfil'><b>" . $LinhasDoBanco["CPF"] . "</b></font>"; ?></p>
+                                        <br>
+                                        <p><b class="Bperfil">Email</b><br> <?php echo "<font class='dadosPerfil'><b>" . $LinhasDoBanco["Email"] . "</b></font>"; ?></p>
+                                        <br>
+                                        <p><b class="Bperfil">Telefone</b><br> <?php echo "<font class='dadosPerfil'><b>" . $LinhasDoBanco["Telefone"] . "</b></font>"; ?></p>
+                                    </div>
                                 </div>
                             </div>
-                        <?php
+
+
+                            <div class="profile-actions">
+
+                                <form action="EditarPerfil.php" method="post"></form>
+
+                                <form action="EditarPerfil.php" method="post">
+                                    <input type="hidden" name="Codigo" value="<?php echo $LinhasDoBanco["id"]; ?>">
+
+                                    <button type="submit" class="fas fa-edit fa-3x"></button>
+                                </form>
+
+                                <form action="deslogar.php" method="post">
+                                    <button type="submit" class="fas fa-sign-out-alt fa-3x"></button>
+                                </form>
+
+                            </div>
+                </div>
+            <?php
                         }
                     } else {
-                        ?>
-                        <p class="no-profile">Nenhum perfil encontrado para o usuário.</p>
-                    <?php
+            ?>
+            <p class="no-profile">Nenhum perfil encontrado para o usuário.</p>
+        <?php
                     }
-                    ?>
-                </div>
-            </form>
+        ?>
         </div>
+        </form>
 
         <div class="Selecionarendereco">
+            <div class="centerImgA">
+                <img src="../img/imgAdress.png" alt="" class="imgAdress">
+                <h1>Edite seus Endereços</h1>
+            </div>
+            <div class="scroll">
+                <?php
 
-            <?php
-
-            if ($resultado) {
-                foreach ($resultado as $endereco) {
-            ?>
-
-                    <?php
-                    echo $endereco["Apelido"] . "<br>";
-                    echo $endereco["Cep"] . "<br>";
-                    echo $endereco["Cidade"] . ", " . $endereco["Estado"] . "<br>";
-                    echo $endereco["Rua"] . ", Nº " . $endereco["Numero"] . "<br>";
-                    echo $endereco["Bairro"] . "<br>";
-                    echo "Referência: " . $endereco["Referencia"] . "<br>";
-                    ?>
+                if ($resultado) {
+                    foreach ($resultado as $endereco) {
+                ?>
 
 
-                    <form action="editarEndereco.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $endereco["id"]; ?>">
+                        <div class="marcador">
+                            <div class="marcAdress">
+                                <?php
+                                echo "<font color='purple'><b>" . $endereco["Apelido"] . "</b></font><br>";
+                                echo "<b class='infoS'>" . $endereco["Cep"] . "</b><br>";
+                                echo "<b class='infoS'>" . $endereco["Cidade"] . ", " . $endereco["Estado"] . "</b><br>";
+                                echo "<b class='infoS'>" . $endereco["Rua"] . ", Nº " . $endereco["Numero"] . "</b><br>";
+                                echo "<b class='infoS'>" . $endereco["Bairro"] . "</b><br>";
+                                ?>
+                            </div>
+                            <div class="colunaBtn">
+                                <form action="editarEndereco.php" method="post">
+                                    <input type="hidden" name="id" value="<?php echo $endereco["id"]; ?>">
+                                    <button type="submit" class="fas fa-edit fa-3x"></button>
+                                </form>
 
-                        <button type="submit">Editar Perfil</button>
-                    </form>
+                                <form action="excluirEndereco.php" method="post" class="delete-address-form">
+                                    <input type="hidden" name="id" value="<?php echo $endereco["id"]; ?>">
+                                    <input type="hidden" name="nome" value="<?php echo htmlspecialchars($endereco["Apelido"]); ?>"> 
+                                    <button type="submit" class="fas fa-trash fa-3x"></button>
+                                </form>
+
+                            </div>
+
+                        </div>
 
 
 
-                    <form action="excluirEndereco.php" method="post">
-                        <input type="hidden" name="id" value="<?php echo $endereco["id"]; ?>">
-                        <button type="submit">Excluir Perfil</button>
-                    </form>
+                        <br>
 
-                    <br>
-            <?php
+
+
+
+                <?php
+                    }
                 }
-            }
-            ?>
+                ?>
 
 
 
+            </div>
         </div>
+        </div>
+
+
     </main>
 
 
@@ -207,5 +255,33 @@ $usuario = $_SESSION['Usuario'];
         <p class="footer-text">&copy;2024 WallStreet | All Rights Reserved</p>
     </footer>
 
-
 </html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+<script>
+    // Adiciona um evento de submit para o formulário específico
+    document.querySelectorAll('.delete-address-form').forEach(form => {
+        form.addEventListener('submit', function(event) {
+            // Impede o envio automático do formulário
+            event.preventDefault();
+
+            // Obtém o nome do endereço a partir do campo oculto
+            const nomeEndereco = this.querySelector('input[name="nome"]').value;
+
+            Swal.fire({
+                title: 'Confirmar Exclusão',
+                text: `Deseja mesmo excluir o endereço "${nomeEndereco}"?`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, excluir!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Submete o formulário se o usuário confirmar
+                    this.submit();
+                }
+            });
+        });
+    });
+</script>

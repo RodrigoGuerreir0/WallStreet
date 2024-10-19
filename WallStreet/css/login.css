@@ -1,130 +1,190 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-html{
-    background: url("../img/bgE2.jpg") no-repeat center center;
-    background-size: cover;
-    overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgb(36, 13, 56),
+    rgb(37, 2, 83),
+    rgb(37, 4, 65)
+  );
 }
 
-
-center{
-    height: 50px;
-}
-.page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    height: 92vh;
-    margin-top:90px;
+.box {
+  position: relative;
+  width: 380px;
+  height: 420px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-
-.formLogin {
-    display: flex;
-    flex-direction: column;
-    background-color: #fdfdfd;
-    border-radius: 7px;
-    padding: 40px;
-    width: 950  px;
-    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
-    gap: 5px;
-    margin-top: -90px;
-    
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #815fd8,
+    #f5f4f7,
+    #815fd8
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
 }
 
-.formLogin2 {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    border-radius: 7px;
-    padding: 20px;
-    width: 250px;
-    height: 300px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-    gap: 5px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #6a4bbf,
+    #4400ff,
+    #6a4bbf
+  );
+  z-index: 1;
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
 }
 
-.areaLogin img {
-    width: 420px;
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.formLogin h1 {
-    padding: 0;
-    margin: 0;
-    font-weight: 500;
-    font-size: 2.3em;
+.box form {
+  position: absolute;
+  inset: 4px;
+  background: #222;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
 }
 
-.formLogin p {
-    display: inline-block;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 25px;
+.box form h2 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
 }
 
-.formLogin input {
-    padding: 15px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    border-radius: 4px;
-    transition: all linear 160ms;
-    outline: none;
+.box form .inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
 }
 
-
-.formLogin input:focus {
-    border: 1px solid #666666;
+.box form .inputBox input {
+  position: relative;
+  width: 100;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
 }
 
-.formLogin label {
-    font-size: 14px;
-    font-weight: 600;
+.box form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  pointer-events: none;
+  color: 8f8f8f;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  color: #fff;
 }
 
-.formLogin a {
-    display: inline-block;
-    margin-bottom: 20px;
-    font-size: 13px;
-    color: #555;
-    transition: all linear 160ms;
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span {
+  color: #fff;
+  font-size: 0.75em;
+  transform: translateY(-34px);
 }
 
-.formLogin a:hover {
-    color: #0e0d0d;
+.box form .inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
 }
 
-.btn {
-    background-color: #bbbbbb;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    border: none !important;
-    transition: all linear 160ms;
-    cursor: pointer;
-    margin: 0 !important;
-    width: 95px;
-    border-radius: 2px;
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i {
+  height: 44px;
 }
-.btn:hover {
-    transform: scale(1.05);
-    background-color: #8a8989;
 
+.box form .links {
+  display: flex;
+  justify-content: space-between;
 }
-    
-.FINAL{
-    margin-top: 50px;
+
+.box form .links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+  text-decoration: none;
+}
+
+.box form .links a:hover,
+.box form .links a:nth-child(2) {
+  color: #fff;
+}
+
+.box form input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 9px 25px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.box form .inputBox input[type="submit"]:active {
+  opacity: 0.8;
 }

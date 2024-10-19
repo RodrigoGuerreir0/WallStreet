@@ -103,6 +103,128 @@ document.getElementById('contato-link').addEventListener('click', function(event
 });
 
 
+function toggleMenu() {
+  var sideMenu = document.getElementById('side-menu');
+  sideMenu.classList.toggle('open');
+}
 
+//mascara CEP
+
+
+
+
+
+
+// scroll boxmap inicio
+    function smoothScroll(element, to, duration) {
+      const start = element.scrollTop;
+      const startTime = performance.now();
+
+      function animateScroll(currentTime) {
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1); // Limita o progresso a 1 (100%)
+
+          element.scrollTop = start + (to - start) * easeInOutQuad(progress);
+
+          if (progress < 1) {
+              requestAnimationFrame(animateScroll);
+          }
+      }
+
+      function easeInOutQuad(t) {
+          return t < 0.5
+              ? 2 * t * t
+              : -1 + (4 - 2 * t) * t;
+      }
+
+      requestAnimationFrame(animateScroll);
+    }
+
+      function scrollUp() {
+        const boxscroll = document.querySelector('.boxscroll');
+        smoothScroll(boxscroll, boxscroll.scrollTop - 121, 800); // Duração em milissegundos
+    }
+
+      function scrollDown() {
+        const boxscroll = document.querySelector('.boxscroll');
+        smoothScroll(boxscroll, boxscroll.scrollTop + 121, 800); // Duração em milissegundos
+    }
+//scroll boxmap fim
+
+
+
+// scroll boxmap vagas adm geral inicio
+    function smoothScroll(element, to, duration) {
+      const start = element.scrollTop;
+      const startTime = performance.now();
+
+      function animateScroll(currentTime) {
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1); // Limita o progresso a 1 (100%)
+
+          element.scrollTop = start + (to - start) * easeInOutQuad(progress);
+
+          if (progress < 1) {
+              requestAnimationFrame(animateScroll);
+          }
+      }
+
+      function easeInOutQuad(t) {
+          return t < 0.5
+              ? 2 * t * t
+              : -1 + (4 - 2 * t) * t;
+      }
+
+      requestAnimationFrame(animateScroll);
+    }
+
+      function scrollUp3() {
+        const boxscroll = document.querySelector('.boxscroll');
+        smoothScroll(boxscroll, boxscroll.scrollTop - 125, 800); // Duração em milissegundos
+    }
+
+      function scrollDown3() {
+        const boxscroll = document.querySelector('.boxscroll');
+        smoothScroll(boxscroll, boxscroll.scrollTop + 125, 800); // Duração em milissegundos
+    }
+//scroll boxmap vagas adm geral fim
+
+
+
+//scroll user inicio
+    function smoothScroll(element, to, duration) {
+      const start = element.scrollTop;
+      const startTime = performance.now();
+
+      function animateScroll(currentTime) {
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1); // Limita o progresso a 1 (100%)
+
+          element.scrollTop = start + (to - start) * easeInOutQuad(progress);
+
+          if (progress < 1) {
+              requestAnimationFrame(animateScroll);
+          }
+      }
+
+      function easeInOutQuad(t) {
+          return t < 0.5
+              ? 2 * t * t
+              : -1 + (4 - 2 * t) * t;
+      }
+
+      requestAnimationFrame(animateScroll);
+    }
+
+      function scrollUp2() {
+        const scroll = document.querySelector('.scroll');
+        smoothScroll(scroll, scroll.scrollTop - 145, 800); // Duração em milissegundos
+    }
+
+      function scrollDown2() {
+        const scroll = document.querySelector('.scroll');
+        smoothScroll(scroll, scroll.scrollTop + 145, 800); // Duração em milissegundos
+    }
+//scoll user fim
 
   

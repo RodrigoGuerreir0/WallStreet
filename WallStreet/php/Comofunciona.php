@@ -1,14 +1,29 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['Usuario'])) {
+
+    echo "<title>Faça seu Login</title>";
+    echo "<link rel='stylesheet' href='../css/home.css'>";
+    echo "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>"; // Inclua o Font Awesome
+
+    echo "<div class='semLogin'>";
+    echo "<div class='page'>";
+    echo "<form action='login.php' method='post' id='loginForm' class='formLogin'>";
 ?>
 
-    <!-- Caso a pessoa não esteja logada, só irá aparecer o que estiver dentro desse if acima -->
+    <!-- Adiciona o ícone de fechamento no topo do formulário -->
 
-    <h2>Você ainda não está logado. Faça seu login</h2>
+    <img src="../img/SemLogin.png" alt="" width="40%" class="imgSl">
+    <h1>Você ainda não está logado. Faça seu login</h1>
+    <button type="submit" class="btn3">Login</button>
     <a href="./login.php">Login</a>
 <?php
     exit();
+
+    echo "</form>";
+    echo "</div>";
+    echo "</div>";
 }
 ?>
 <!DOCTYPE html>
@@ -17,7 +32,7 @@ if (!isset($_SESSION['Usuario'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/comoFunciona.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/comoFunciona.css">
@@ -30,7 +45,12 @@ if (!isset($_SESSION['Usuario'])) {
 <header>
     <nav>
         <img src="../img/logoWall.png" class="imglogo" alt="" onclick="redirectToHome()">
-        <a class="logo" href="inicio.php"><font class="a2">ENtenda como funciona a WallStreet    </font><font class="color"><?php // echo $_SESSION['Usuario']; ?></font></a>
+        <a class="logo" href="inicio.php">
+            <font class="a2">Entenda como funciona a WallStreet </font>
+        
+            <font class="color"><?php // echo $_SESSION['Usuario']; 
+                                ?></font>
+        </a>
 
         <div class="mobile-menu">
             <div class="line1"></div>
@@ -41,69 +61,50 @@ if (!isset($_SESSION['Usuario'])) {
         <ul class="nav-list">
             <li><a class="li_A" href="inicio.php"><i class="fas fa-home fa-2x"></i></a></li>
 
-           
-            
+
+
             <li><a class="li_A" href="perfil.php" title="Perfil"><i class="fa fa-user fa-2x"></i></a></li>
         </ul>
     </nav>
 </header>
 
-
-
 <main>
-  
 
-<div class="page">
-        <br>
-
-        <!--<div class="formLogin2">
-
-        
-         <h1>Quem somos</h1>
-
-          
-
-        </div> -->
-
-        <div class="formLogin">
-            <div class="box">
-
-            <h1>Como Funciona o Sistema de Estacionamento Inteligente</h1>
-        
-        <p>O sistema de estacionamento inteligente com sensor de presença e integração com um site proporciona uma maneira moderna e eficiente de gerenciar vagas de estacionamento. Aqui está um resumo de como o sistema funciona:</p>
-        
-        <h2>1. Detecção de Vagas Disponíveis</h2>
-        <p>O sistema utiliza sensores de presença instalados em cada vaga de estacionamento. Esses sensores detectam se a vaga está ocupada ou disponível e transmitem essas informações em tempo real.</p>
-        
-        <h2>2. Sinalização Visual</h2>
-        <p>Para facilitar a localização das vagas, o sistema utiliza sinalização com luzes verde e vermelha. As luzes verdes indicam vagas disponíveis, enquanto as vermelhas sinalizam que a vaga está ocupada. Isso ajuda os motoristas a encontrar rapidamente uma vaga sem a necessidade de procurar por longos períodos.</p>
-        
-        <h2>3. Integração com o Site</h2>
-        <p>Os motoristas podem acessar um site integrado ao sistema para verificar a disponibilidade de vagas em tempo real. Além disso, o site permite que os motoristas realizem pagamentos online para o estacionamento. Essa integração economiza tempo, reduz o tráfego e melhora a experiência geral do usuário.</p>
-        
-        <h2>4. Benefícios e Desafios</h2>
-        <div class="highlight">
-            <p><strong>Benefícios:</strong></p>
-            <ul>
-                <li>Facilidade de uso com sinalização clara.</li>
-                <li>Acesso em tempo real à disponibilidade de vagas e pagamento online.</li>
-                <li>Redução do tempo de busca por vagas e do tráfego no estacionamento.</li>
-            </ul>
-        </div>
-       
-        
-        <p>Para garantir a eficácia do sistema, é essencial levar em conta as necessidades dos usuários e dos administradores de estacionamento. A implementação deve ser planejada cuidadosamente para proporcionar uma experiência segura e eficiente para todos os envolvidos.</p>
-    
-            
-        
-
+    <div class="page">
+        <div class="FUndoComoFunciona__Main">
+            <div class="Title_ComoFunciona">
+                <h1>Como Funciona o Sistema de Estacionamento Inteligente</h1>
             </div>
+            <div class="TXT_Comofunciona">
+                <p>O sistema de estacionamento inteligente com sensor de presença e integração com um site proporciona uma maneira moderna e eficiente de gerenciar vagas de estacionamento. Aqui está um resumo de como o sistema funciona:</p>
 
+                <h2>1. Detecção de Vagas Disponíveis</h2>
+                <p>O sistema utiliza sensores de presença instalados em cada vaga de estacionamento. Esses sensores detectam se a vaga está ocupada ou disponível e transmitem essas informações em tempo real.</p>
+
+                <h2>2. Sinalização Visual</h2>
+                <p>Para facilitar a localização das vagas, o sistema utiliza sinalização com luzes verde e vermelha. As luzes verdes indicam vagas disponíveis, enquanto as vermelhas sinalizam que a vaga está ocupada. Isso ajuda os motoristas a encontrar rapidamente uma vaga sem a necessidade de procurar por longos períodos.</p>
+
+                <h2>3. Integração com o Site</h2>
+                <p>Os motoristas podem acessar um site integrado ao sistema para verificar a disponibilidade de vagas em tempo real. Além disso, o site permite que os motoristas realizem pagamentos online para o estacionamento. Essa integração economiza tempo, reduz o tráfego e melhora a experiência geral do usuário.</p>
+
+                <h2>4. Benefícios e Desafios</h2>
+                <div class="highlight">
+                    <p><strong>Benefícios:</strong></p>
+                    <ul>
+                        <li>Facilidade de uso com sinalização clara.</li>
+                        <li>Acesso em tempo real à disponibilidade de vagas e pagamento online.</li>
+                        <li>Redução do tempo de busca por vagas e do tráfego no estacionamento.</li>
+                    </ul>
+                </div>
+                <p>Para garantir a eficácia do sistema, é essencial levar em conta as necessidades dos usuários e dos administradores de estacionamento. A implementação deve ser planejada cuidadosamente para proporcionar uma experiência segura e eficiente para todos os envolvidos.</p>
+            </div>
         </div>
-        
     </div>
 
-    </main>
+
+   
+
+</main>
 <footer>
     <div class="container-footer">
         <div class="row-footer">

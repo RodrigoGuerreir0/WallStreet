@@ -1,9 +1,29 @@
 <?php
 session_start();
+
 if (!isset($_SESSION['Usuario'])) {
-    echo "<h2>Você ainda não está logado. Faça seu login.</h2>";
-    echo '<a href="./login.php">Login</a>';
+
+ echo "<title>Faça seu Login</title>";
+ echo "<link rel='stylesheet' href='../css/home.css'>";
+ echo "<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>"; // Inclua o Font Awesome
+
+ echo "<div class='semLogin'>";
+ echo "<div class='page'>";
+ echo "<form action='login.php' method='post' id='loginForm' class='formLogin'>";
+?>
+
+    <!-- Adiciona o ícone de fechamento no topo do formulário -->
+   
+    <img src="../img/SemLogin.png" alt="" width="40%" class="imgSl">
+    <h1>Você ainda não está logado. Faça seu login</h1>
+    <button type="submit" class="btn3">Login</button>
+    <a href="./login.php">Login</a>
+<?php
     exit();
+    
+ echo "</form>";
+ echo "</div>";
+ echo "</div>";
 }
 
 $usuario = $_SESSION['Usuario'];
@@ -62,6 +82,12 @@ try {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Inclua jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Inclua o jQuery Mask Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
     <script src="../javascript/mobilehome.js"></script>
     <title>Perfil</title>
 </head>
@@ -88,32 +114,35 @@ try {
 </header>
 
 <main>
-    <div class="page">
-    <?php if (isset($InformacaoDoUsuario)) { ?>
+        <div class="page">
+        <?php if (isset($InformacaoDoUsuario)) { ?>
 
-        <form method="POST" action="" class="formLogin">
-
-            <input type="hidden" name="Codigo" value="<?php echo ($InformacaoDoUsuario['id']); ?>">
-            <label for="Nome">Nome:</label>
-            <input type="text" id="Nome" name="Nome" value="<?php echo ($InformacaoDoUsuario['Nome']); ?>" required>
-            <br>
-            <label for="Email">Email:</label>
-            <input type="email" id="Email" name="Email" value="<?php echo ($InformacaoDoUsuario['Email']); ?>" required>
-            <br>
-            <label for="Telefone">Telefone:</label>
-            <input type="text" id="Telefone" name="Telefone" value="<?php echo ($InformacaoDoUsuario['Telefone']); ?>" required>
-            <br>
-            <label for="Usuario">Usuário:</label>
-            <input type="text" id="Usuario" name="Usuario" value="<?php echo ($InformacaoDoUsuario['Usuario']); ?>" readonly>
-            
-            <input type="submit" value="Atualizar" class="btn" >
-        </form>
-    <?php } else { ?>
-        <p>Não foi possível recuperar as informações do usuário.</p>
-    <?php } ?>
-
-    </div>
+            <form method="POST" action="" class="formLogin">
+                <input type="hidden" name="Codigo" value="<?php echo ($InformacaoDoUsuario['id']); ?>">
+                <label for="Nome" class="Bperfil">Nome</label>
+                <input type="text" id="Nome" name="Nome" value="<?php echo ($InformacaoDoUsuario['Nome']); ?>" required>
+                <br>
+                <label for="Email" class="Bperfil">Email</label>
+                <input type="email" id="Email" name="Email" value="<?php echo ($InformacaoDoUsuario['Email']); ?>" required>
+                <br>
+                <label for="Telefone" class="Bperfil">Telefone</label>
+                <input type="text" id="Telefone" name="Telefone" value="<?php echo ($InformacaoDoUsuario['Telefone']); ?>" required>
+                <br>
+                <label for="Usuario" class="Bperfil">Usuário</label>
+                <input type="text" id="Usuario" name="Usuario" value="<?php echo ($InformacaoDoUsuario['Usuario']); ?>" readonly>
+                <input type="submit" value="Atualizar" class="btn">
+            </form>
+        <?php } else { ?>
+            <p>Não foi possível recuperar as informações do usuário.</p>
+        <?php } ?>
+        </div>
     </main>
+
+    <script>
+        $(document).ready(function(){
+            $('#Telefone').mask('(00) 00000-0000');
+        });
+    </script>
 
 
         
